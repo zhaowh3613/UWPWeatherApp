@@ -1,4 +1,5 @@
 ﻿using MvvmSampleWeatherApp.Model;
+using MvvmSampleWeatherApp.ViewModel;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -28,36 +29,22 @@ namespace MvvmSampleWeatherApp.View
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        MainViewModel vmLocator = ViewModelLocator.Instance.Main;
         public MainPage()
         {
             this.InitializeComponent();
             var imageBrush = new ImageBrush();
             imageBrush.ImageSource = new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
             MainGrid.Background = imageBrush;
+
         }
 
-        private const string TOKENKEY = "hwgl4pd1vl4qrkka";
-        private const string UID = "UE5A5FDF53";
-        private string NowUrl = $"https://api.seniverse.com/v3/weather/now.json?key={TOKENKEY}&location=beijing&language=zh-Hans&unit=c";
-        private string DailyUrl = $" https://api.seniverse.com/v3/weather/daily.json?key={TOKENKEY}&location=beijing&language=zh-Hans&unit=c&start=0&days=5";
-
-        public async Task<string> SendHttpRequest(string url)
+        private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            try
+            if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                var uri = new Uri(DailyUrl);
-                var client = new HttpClient();
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(UID, TOKENKEY);
-                var respStr = await client.GetStringAsync(uri);
-                var jsonObject = JsonConvert.DeserializeObject<WeatherCollection>(respStr);
-
-                return respStr;
+                vmLocator.Search();
             }
-            catch (Exception ex)
-            {
-                return "";
-            }
-           
         }
     }
 }

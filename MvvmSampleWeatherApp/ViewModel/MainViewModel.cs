@@ -1,7 +1,9 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using MvvmSampleWeatherApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +36,48 @@ namespace MvvmSampleWeatherApp.ViewModel
             }
         }
 
+        private Location mLocation;
+
+        public Location Location
+        {
+            get { return mLocation; }
+            set
+            {
+                mLocation = value;
+                RaisePropertyChanged(() => Location);
+            }
+        }
+
+        private String mLastUpdateTime;
+
+        public String LastUpdateTime
+        {
+            get { return mLastUpdateTime; }
+            set
+            {
+                mLastUpdateTime = value;
+                RaisePropertyChanged(() => LastUpdateTime);
+            }
+        }
+
+        private String mSearchText = "shanghai";
+
+        public String SearchText
+        {
+            get { return mSearchText; }
+            set
+            {
+                mSearchText = value;
+            }
+        }
+
+        private RelayCommand mSearchCommand;
+
+        public RelayCommand SearchCommand
+        {
+            get { return mSearchCommand ?? (mSearchCommand = new RelayCommand(Search, CanSearchExcute)); }
+        }
+
 
         public MainViewModel()
         {
@@ -42,12 +86,45 @@ namespace MvvmSampleWeatherApp.ViewModel
 
         public async Task InitData()
         {
-           var collection = await WeatherApiBase.Current.GetWeatherCollection();
+            try
+            {
+                var collection = await WeatherApiBase.Instance.GetWeatherNow();
+                if (collection != null)
+                {
+                    Now = collection.results?.FirstOrDefault().now;
+                    Location = collection.results?.FirstOrDefault().location;
+                    var lastUpdate = DateTime.Now;
+                    DateTime.TryParse(collection.results?.FirstOrDefault().last_update, out lastUpdate);
+                    LastUpdateTime = lastUpdate.ToString("hh:mm");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"InitData Error: {ex.Message}");
+            }
+         
+        }
+
+        public async void Search()
+        {
+            var collection = await WeatherApiBase.Instance.GetWeatherNow(SearchText);
             if (collection != null)
             {
-                Now = collection.results.FirstOrDefault().now;
+                Now = collection.results?.FirstOrDefault().now;
+                Location = collection.results?.FirstOrDefault().location;
+                var lastUpdate = DateTime.Now;
+                DateTime.TryParse(collection.results?.FirstOrDefault().last_update, out lastUpdate);
+                LastUpdateTime = lastUpdate.ToString("hh:mm");
             }
         }
 
+        private bool CanSearchExcute()
+        {
+            if (String.IsNullOrWhiteSpace(mSearchText))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

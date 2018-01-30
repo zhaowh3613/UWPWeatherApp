@@ -10,6 +10,15 @@ namespace MvvmSampleWeatherApp.ViewModel
 {
     public class ViewModelLocator
     {
+        private static ViewModelLocator _instance;
+        public static ViewModelLocator Instance
+        {
+            get
+            {
+                return _instance ?? (_instance = new ViewModelLocator());
+            }
+        }
+
         public ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);

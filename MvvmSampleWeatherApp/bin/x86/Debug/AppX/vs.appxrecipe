@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-30T10:17:56.914</Modified>
+      <Modified>2018-01-30T23:24:20.893</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\MvvmSampleWeatherApp.exe">
       <PackagePath>entrypoint\MvvmSampleWeatherApp.exe</PackagePath>
-      <Modified>2018-01-30T10:17:53.354</Modified>
+      <Modified>2018-01-30T23:24:19.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zhaow\.nuget\packages\commonservicelocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -579,7 +579,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\MvvmSampleWeatherApp.xr.xml">
       <PackagePath>MvvmSampleWeatherApp.xr.xml</PackagePath>
-      <Modified>2018-01-30T10:17:52.557</Modified>
+      <Modified>2018-01-30T23:18:35.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -588,11 +588,11 @@
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-30T10:17:55.327</Modified>
+      <Modified>2018-01-30T23:24:20.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\Core\MvvmSampleWeatherApp.exe">
       <PackagePath>MvvmSampleWeatherApp.exe</PackagePath>
-      <Modified>2018-01-30T10:17:56.861</Modified>
+      <Modified>2018-01-30T23:24:20.878</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

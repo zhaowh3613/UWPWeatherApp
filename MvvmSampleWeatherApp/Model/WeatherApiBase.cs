@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -9,24 +10,51 @@ namespace MvvmSampleWeatherApp.Model
 {
     public class WeatherApiBase
     {
-        public static WeatherApiBase Current { get; private set; }
+        private static WeatherApiBase _instance;
+        public static WeatherApiBase Instance
+        {
+            get
+            {
+                return _instance ?? (_instance = new WeatherApiBase());
+            }
+        }
+
         public WeatherApiBase()
         {
-            Current = new WeatherApiBase();
         }
 
         public WeatherCollection Items { get; set; }
-        public async Task<WeatherCollection> GetWeatherCollection()
+        private async Task<WeatherCollection> GetWeatherCollection(string url)
         {
-            var nowUrl = Constants.NowUrl;
-            var nowResp = await Util.SendHttpRequestWithAuth(nowUrl, Constants.UID, Constants.TOKENKEY);
-            var weatherCollection = Util.ParseJsonResult<WeatherCollection>(nowResp);
-            if (weatherCollection != null)
+            try
             {
-                Items = weatherCollection;
+                if (string.IsNullOrWhiteSpace(url))
+                {
+                    return null;
+                }
+                var nowResp = await Util.SendHttpRequestWithAuth(url, Constants.UID, Constants.TOKENKEY);
+                var weatherCollection = Util.ParseJsonResult<WeatherCollection>(nowResp);
+                return weatherCollection;
             }
-            return weatherCollection;
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"GetWeatherCollection Error: {ex.Message}");
+                return null;
+            }
         }
 
+        public async Task<WeatherCollection> GetWeatherNow(string city = "beijing")
+        {
+            var nowUrl = String.Format(Constants.NowUrl, city);
+            var collection = await GetWeatherCollection(nowUrl);
+            return collection;
+        }
+
+        public async Task<WeatherCollection> GetWeatherDaily(string city = "beijing")
+        {
+            var nowUrl = String.Format(Constants.DailyUrl, Constants.TOKENKEY, city);
+            var collection = await GetWeatherCollection(nowUrl);
+            return collection;
+        }
     }
 }
