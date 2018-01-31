@@ -19,7 +19,7 @@
             <TextBox x:ConnectionId='2' Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="200" Height="35" HorizontalAlignment="Right" Margin="0,0,100,0"                          ></TextBox>
             <Button Command="{Binding SearchCommand}" Content="Search" Width="65" Height="35" HorizontalAlignment="Right" Margin="0,0,35,0"></Button>
         </Grid>
-        <Grid Width="400"  Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Grid Width="600"  Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
@@ -56,8 +56,9 @@
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBlock  Grid.Row="0" Text="Day Details" Grid.ColumnSpan="2" Margin="20" FontSize="40" Foreground="White"></TextBlock>
             <Grid Grid.Row="1" Grid.Column="0" Margin="20,0">
@@ -79,7 +80,7 @@
                     <TextBlock Text="{Binding Suggestion.Flu.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
             </Grid>
-            <Grid Grid.Row="1" Grid.Column="1" Margin="20,0">
+            <Grid Grid.Row="1" Grid.Column="2" Margin="20,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>

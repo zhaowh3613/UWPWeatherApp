@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-31T05:35:17.668</Modified>
+      <Modified>2018-01-31T05:45:47.088</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\MvvmSampleWeatherApp.exe">
       <PackagePath>entrypoint\MvvmSampleWeatherApp.exe</PackagePath>
-      <Modified>2018-01-31T05:35:16.598</Modified>
+      <Modified>2018-01-31T05:45:46.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zhaow\.nuget\packages\commonservicelocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -624,11 +624,11 @@
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-31T05:35:17.348</Modified>
+      <Modified>2018-01-31T05:43:42.229</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\Core\MvvmSampleWeatherApp.exe">
       <PackagePath>MvvmSampleWeatherApp.exe</PackagePath>
-      <Modified>2018-01-31T05:35:17.655</Modified>
+      <Modified>2018-01-31T05:45:47.078</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -155,7 +155,7 @@ namespace MvvmSampleWeatherApp.ViewModel
         {
             try
             {
-                var collection = await WeatherApiBase.Instance.GetWeatherSuggestion();
+                var collection = await WeatherApiBase.Instance.GetWeatherSuggestion(SearchText);
                 if (collection != null)
                 {
                     Suggestion = collection.results?.FirstOrDefault().Suggestion;
