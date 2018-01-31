@@ -403,6 +403,33 @@
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BGa1920x1080.jpg">
       <PackagePath>Assets\BGa1920x1080.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_cloudy.jpg">
+      <PackagePath>Assets\BG_cloudy.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_cloudy2.jpg">
+      <PackagePath>Assets\BG_cloudy2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_foggy.jpg">
+      <PackagePath>Assets\BG_foggy.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_foggy2.jpg">
+      <PackagePath>Assets\BG_foggy2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_overcast.jpg">
+      <PackagePath>Assets\BG_overcast.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_rain.jpg">
+      <PackagePath>Assets\BG_rain.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_rain2.jpg">
+      <PackagePath>Assets\BG_rain2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_snow.jpg">
+      <PackagePath>Assets\BG_snow.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_windy.jpg">
+      <PackagePath>Assets\BG_windy.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

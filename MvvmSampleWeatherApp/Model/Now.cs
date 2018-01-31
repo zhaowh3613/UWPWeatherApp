@@ -12,39 +12,39 @@ namespace MvvmSampleWeatherApp.Model
     public class Now
     {
         [DataMember(Name = "text")]
-        public string text { get; set; }
+        public string Text { get; set; }
 
         [DataMember(Name = "code")]
-        public string code { get; set; }
+        public string Code { get; set; }
 
         [DataMember(Name = "temperature")]
-        public string temperature { get; set; }
+        public string Temperature { get; set; }
 
         [DataMember(Name = "feels_like")]
-        public string feels_like { get; set; }
+        public string FeelsLike { get; set; }
 
         [DataMember(Name = "pressure")]
-        public string pressure { get; set; }
+        public string Pressure { get; set; }
 
         [DataMember(Name = "humidity")]
-        public string humidity { get; set; }
+        public string Humidity { get; set; }
 
         [DataMember(Name = "visibility")]
-        public string visibility { get; set; }
+        public string Visibility { get; set; }
 
         [DataMember(Name = "wind_direction_degree")]
-        public string wind_direction_degree { get; set; }
+        public string WindDirectionDegree { get; set; }
 
         [DataMember(Name = "wind_speed")]
-        public string wind_speed { get; set; }
+        public string WindSpeed { get; set; }
 
         [DataMember(Name = "wind_scale")]
-        public string wind_scale { get; set; }
+        public string WindScale { get; set; }
 
         [DataMember(Name = "clouds")]
-        public string clouds { get; set; }
+        public string Clouds { get; set; }
 
         [DataMember(Name = "dew_point")]
-        public string dew_point { get; set; }
+        public string DewPoint { get; set; }
     }
 }

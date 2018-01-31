@@ -33,9 +33,9 @@ namespace MvvmSampleWeatherApp.View
         public MainPage()
         {
             this.InitializeComponent();
-            var imageBrush = new ImageBrush();
-            imageBrush.ImageSource = new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
-            MainGrid.Background = imageBrush;
+            //var imageBrush = new ImageBrush();
+            //imageBrush.ImageSource = new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
+            //MainGrid.Background = imageBrush;
 
         }
 

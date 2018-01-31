@@ -12,16 +12,17 @@ namespace MvvmSampleWeatherApp.Model
     {
 
         [DataMember(Name = "location")]
-        public Location location { get; set; }
+        public Location Location { get; set; }
 
         [DataMember(Name = "last_update")]
-        public string last_update { get; set; }
+        public string LastUpdate { get; set; }
+        public string BGUrl { get; set; }
 
         [DataMember(Name = "now")]
-        public Now now { get; set; }
+        public Now Now { get; set; }
 
         [DataMember(Name = "daily")]
-        public Daily[] daily { get; set; }
+        public Daily[] Daily { get; set; }
 
     }
 

@@ -117,6 +117,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BGa1920x1080.jpg" />
+    <Content Include="Assets\BG_cloudy.jpg" />
+    <Content Include="Assets\BG_cloudy2.jpg" />
+    <Content Include="Assets\BG_foggy.jpg" />
+    <Content Include="Assets\BG_foggy2.jpg" />
+    <Content Include="Assets\BG_overcast.jpg" />
+    <Content Include="Assets\BG_rain.jpg" />
+    <Content Include="Assets\BG_rain2.jpg" />
+    <Content Include="Assets\BG_snow.jpg" />
+    <Content Include="Assets\BG_windy.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -8,7 +8,7 @@
     DataContext="{Binding Source={StaticResource Locator},Path=Main}"
     mc:Ignorable="d">
 
-    <Grid x:ConnectionId='1' x:Name="MainGrid" Background="SkyBlue">
+    <Grid x:ConnectionId='1' x:Name="MainGrid" Background="{Binding BGImage}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -28,15 +28,15 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="0">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="{Binding Location.name}" Foreground="White" FontSize="40"  HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Text="{Binding Location.Name}" Foreground="White" FontSize="40"  HorizontalAlignment="Center"></TextBlock>
                     <TextBlock Text=", " Foreground="White" FontSize="40"  HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Text="{Binding Location.country}" Foreground="White" FontSize="40"  HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Text="{Binding Location.Country}" Foreground="White" FontSize="40"  HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 </Grid>
             <Grid Grid.Row="1" Margin="0,10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="{Binding Now.text}" Foreground="White" FontSize="70"  HorizontalAlignment="Left" Margin="10,0"></TextBlock>
-                    <TextBlock Text="{Binding Now.temperature}" Foreground="White" FontSize="70"  HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Text="{Binding Now.Text}" Foreground="White" FontSize="70"  HorizontalAlignment="Left" Margin="10,0"></TextBlock>
+                    <TextBlock Text="{Binding Now.Temperature}" Foreground="White" FontSize="70"  HorizontalAlignment="Center"></TextBlock>
                     <TextBlock Text="℃" Foreground="White" FontSize="70"  HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
             </Grid>

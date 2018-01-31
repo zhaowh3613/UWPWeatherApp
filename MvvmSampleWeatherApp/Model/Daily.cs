@@ -11,40 +11,40 @@ namespace MvvmSampleWeatherApp.Model
     public class Daily
     {
         [DataMember(Name = "date")]
-        public string date { get; set; }
+        public string Date { get; set; }
 
         [DataMember(Name = "text_day")]
-        public string text_day { get; set; }
+        public string TextDay { get; set; }
 
         [DataMember(Name = "code_day")]
-        public string code_day { get; set; }
+        public string CodeDay { get; set; }
 
         [DataMember(Name = "text_night")]
-        public string text_night { get; set; }
+        public string TextNight { get; set; }
 
         [DataMember(Name = "code_night")]
-        public string code_night { get; set; }
+        public string CodeNight { get; set; }
 
         [DataMember(Name = "high")]
-        public string high { get; set; }
+        public string High { get; set; }
 
         [DataMember(Name = "low")]
-        public string low { get; set; }
+        public string Low { get; set; }
 
         [DataMember(Name = "precip")]
-        public string precip { get; set; }
+        public string Precip { get; set; }
 
         [DataMember(Name = "wind_direction")]
-        public string wind_direction { get; set; }
+        public string WindDirection { get; set; }
 
         [DataMember(Name = "wind_direction_degree")]
-        public string wind_direction_degree { get; set; }
+        public string WindDirectionDegree { get; set; }
 
         [DataMember(Name = "wind_speed")]
-        public string wind_speed { get; set; }
+        public string WindSpeed { get; set; }
 
         [DataMember(Name = "wind_scale")]
-        public string wind_scale { get; set; }
+        public string WindSWcale { get; set; }
     }
     
 }

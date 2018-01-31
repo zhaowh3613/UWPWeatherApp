@@ -2,13 +2,14 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Main" />
+    <RootPropertyPathName Name="BGImage" />
     <RootPropertyPathName Name="LastUpdateTime" />
     <RootPropertyPathName Name="Now" />
-    <RootPropertyPathName Name="temperature" />
-    <RootPropertyPathName Name="text" />
+    <RootPropertyPathName Name="Temperature" />
+    <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Location" />
-    <RootPropertyPathName Name="country" />
-    <RootPropertyPathName Name="name" />
+    <RootPropertyPathName Name="Country" />
+    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="SearchCommand" />
     <RootPropertyPathName Name="SearchText" />
   </Roots.PropertyPathNames>

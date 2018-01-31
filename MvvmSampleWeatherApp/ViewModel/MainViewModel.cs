@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace MvvmSampleWeatherApp.ViewModel
 {
@@ -23,6 +25,22 @@ namespace MvvmSampleWeatherApp.ViewModel
                 RaisePropertyChanged(() => WeatherCollection);
             }
         }
+
+        private ImageBrush mBGImage = new ImageBrush();
+
+        public ImageBrush BGImage
+        {
+            get
+            {
+                return mBGImage;
+            }
+            set
+            {
+                mBGImage = value;
+                RaisePropertyChanged(() => BGImage);
+            }
+        }
+
 
         private Now mNow;
 
@@ -91,11 +109,12 @@ namespace MvvmSampleWeatherApp.ViewModel
                 var collection = await WeatherApiBase.Instance.GetWeatherNow();
                 if (collection != null)
                 {
-                    Now = collection.results?.FirstOrDefault().now;
-                    Location = collection.results?.FirstOrDefault().location;
+                    Now = collection.results?.FirstOrDefault().Now;
+                    Location = collection.results?.FirstOrDefault().Location;
                     var lastUpdate = DateTime.Now;
-                    DateTime.TryParse(collection.results?.FirstOrDefault().last_update, out lastUpdate);
+                    DateTime.TryParse(collection.results?.FirstOrDefault().LastUpdate, out lastUpdate);
                     LastUpdateTime = lastUpdate.ToString("hh:mm");
+                    BGImage.ImageSource = GetBGImage(Now.Code);
                 }
             }
             catch (Exception ex)
@@ -110,11 +129,12 @@ namespace MvvmSampleWeatherApp.ViewModel
             var collection = await WeatherApiBase.Instance.GetWeatherNow(SearchText);
             if (collection != null)
             {
-                Now = collection.results?.FirstOrDefault().now;
-                Location = collection.results?.FirstOrDefault().location;
+                Now = collection.results?.FirstOrDefault().Now;
+                Location = collection.results?.FirstOrDefault().Location;
                 var lastUpdate = DateTime.Now;
-                DateTime.TryParse(collection.results?.FirstOrDefault().last_update, out lastUpdate);
+                DateTime.TryParse(collection.results?.FirstOrDefault().LastUpdate, out lastUpdate);
                 LastUpdateTime = lastUpdate.ToString("hh:mm");
+                BGImage.ImageSource = GetBGImage(Now.Code);
             }
         }
 
@@ -125,6 +145,66 @@ namespace MvvmSampleWeatherApp.ViewModel
                 return false;
             }
             return true;
+        }
+
+        private BitmapImage GetBGImage(string conditionCode = "0")
+        {
+            
+            switch (conditionCode)
+            {
+                //sunny
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
+                //cloudy
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_cloudy2.jpg", UriKind.Absolute));
+                //overcast
+                case "9":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_overcast.jpg", UriKind.Absolute));
+                //rain
+                case "10":
+                case "11":
+                case "12":
+                case "13":
+                case "14":
+                case "15":
+                case "16":
+                case "17":
+                case "18":
+                case "19":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_rain2.jpg", UriKind.Absolute));
+                //snow
+                case "20":
+                case "21":
+                case "22":
+                case "23":
+                case "24":
+                case "25":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_snow.jpg", UriKind.Absolute));
+                case "30":
+                case "31":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_foggy.jpg", UriKind.Absolute));
+                case "32":
+                case "33":
+                case "34":
+                case "35":
+                case "36":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_windy.jpg", UriKind.Absolute));
+                    //cold
+                case "37":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BG_snow.jpg", UriKind.Absolute));
+                case "38":
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
+                default:
+                    return new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
+            }
         }
     }
 }

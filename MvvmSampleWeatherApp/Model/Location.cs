@@ -11,14 +11,14 @@ namespace MvvmSampleWeatherApp.Model
     public class Location
     {
         [DataMember(Name = "id")]
-        public string id { get; set; }
+        public string Id { get; set; }
         [DataMember(Name = "name")]
-        public string name { get; set; }
+        public string Name { get; set; }
         [DataMember(Name = "country")]
-        public string country { get; set; }
+        public string Country { get; set; }
         [DataMember(Name = "timezone")]
-        public string timezone { get; set; }
+        public string Timezone { get; set; }
         [DataMember(Name = "timezone_offset")]
-        public string timezone_offset { get; set; }
+        public string TimezoneOffset { get; set; }
     }
 }
