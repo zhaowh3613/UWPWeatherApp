@@ -24,6 +24,9 @@ namespace MvvmSampleWeatherApp.Model
         [DataMember(Name = "daily")]
         public Daily[] Daily { get; set; }
 
+        [DataMember(Name = "suggestion")]
+        public Suggestion Suggestion { get; set; }
+
     }
 
     [DataContract]

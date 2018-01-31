@@ -54,6 +54,19 @@ namespace MvvmSampleWeatherApp.ViewModel
             }
         }
 
+        private Suggestion mSuggestion;
+
+        public Suggestion Suggestion
+        {
+            get { return mSuggestion; }
+            set
+            {
+                mSuggestion = value;
+                RaisePropertyChanged(() => Suggestion);
+            }
+        }
+
+
         private Location mLocation;
 
         public Location Location
@@ -106,6 +119,20 @@ namespace MvvmSampleWeatherApp.ViewModel
         {
             try
             {
+                UpdateWeatherNow();
+                UpdateWeatherSuggestion();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"InitData Error: {ex.Message}");
+            }
+         
+        }
+
+        public async void UpdateWeatherNow()
+        {
+            try
+            {
                 var collection = await WeatherApiBase.Instance.GetWeatherNow();
                 if (collection != null)
                 {
@@ -115,13 +142,29 @@ namespace MvvmSampleWeatherApp.ViewModel
                     DateTime.TryParse(collection.results?.FirstOrDefault().LastUpdate, out lastUpdate);
                     LastUpdateTime = lastUpdate.ToString("hh:mm");
                     BGImage.ImageSource = GetBGImage(Now.Code);
+
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"InitData Error: {ex.Message}");
+                Debug.WriteLine($"UpdateWeatherNow Error: {ex.Message}");
             }
-         
+        }
+
+        public async void UpdateWeatherSuggestion()
+        {
+            try
+            {
+                var collection = await WeatherApiBase.Instance.GetWeatherSuggestion();
+                if (collection != null)
+                {
+                    Suggestion = collection.results?.FirstOrDefault().Suggestion;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"UpdateWeatherNow Error: {ex.Message}");
+            }
         }
 
         public async void Search()
@@ -136,6 +179,7 @@ namespace MvvmSampleWeatherApp.ViewModel
                 LastUpdateTime = lastUpdate.ToString("hh:mm");
                 BGImage.ImageSource = GetBGImage(Now.Code);
             }
+            UpdateWeatherSuggestion();
         }
 
         private bool CanSearchExcute()

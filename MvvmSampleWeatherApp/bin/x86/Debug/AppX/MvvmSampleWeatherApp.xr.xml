@@ -3,6 +3,14 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Main" />
     <RootPropertyPathName Name="BGImage" />
+    <RootPropertyPathName Name="Suggestion" />
+    <RootPropertyPathName Name="UV" />
+    <RootPropertyPathName Name="Brief" />
+    <RootPropertyPathName Name="Travel" />
+    <RootPropertyPathName Name="Sport" />
+    <RootPropertyPathName Name="Flu" />
+    <RootPropertyPathName Name="Dressing" />
+    <RootPropertyPathName Name="CarWashing" />
     <RootPropertyPathName Name="LastUpdateTime" />
     <RootPropertyPathName Name="Now" />
     <RootPropertyPathName Name="Temperature" />
@@ -38,23 +46,33 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Children" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontWeight" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Children" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">

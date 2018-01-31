@@ -99,6 +99,7 @@
     <Compile Include="Model\Daily.cs" />
     <Compile Include="Model\Location.cs" />
     <Compile Include="Model\Now.cs" />
+    <Compile Include="Model\Suggestion.cs" />
     <Compile Include="Model\Util.cs" />
     <Compile Include="Model\WeatherCollection..cs" />
     <Compile Include="Model\WeatherApiBase.cs" />

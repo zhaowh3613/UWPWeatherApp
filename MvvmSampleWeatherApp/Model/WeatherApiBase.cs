@@ -56,5 +56,12 @@ namespace MvvmSampleWeatherApp.Model
             var collection = await GetWeatherCollection(nowUrl);
             return collection;
         }
+
+        public async Task<WeatherCollection> GetWeatherSuggestion(string city = "beijing")
+        {
+            var suggestionUrl = String.Format(Constants.SuggestionUrl, city);
+            var collection = await GetWeatherCollection(suggestionUrl);
+            return collection;
+        }
     }
 }

@@ -11,6 +11,7 @@
     <Grid x:Name="MainGrid" Background="{Binding BGImage}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid  Grid.Row="0">
@@ -48,6 +49,56 @@
             </Grid>
             <Grid Grid.Row="3"></Grid>
             <Grid Grid.Row="4"></Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock  Grid.Row="0" Text="Day Details" Grid.ColumnSpan="2" Margin="20" FontSize="40" Foreground="White"></TextBlock>
+            <Grid Grid.Row="1" Grid.Column="0" Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20, 0, 20 0">
+                    <TextBlock Text="CarWashing :" Foreground="White" Margin="0,0,10,0" FontSize="20"  HorizontalAlignment="Left"></TextBlock>
+                    <TextBlock Text="{Binding Suggestion.CarWashing.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20, 0, 20 0">
+                    <TextBlock Text="Dressing :" Foreground="White" Margin="0,0,10,0" FontSize="20"  HorizontalAlignment="Left"></TextBlock>
+                    <TextBlock Text="{Binding Suggestion.Dressing.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20, 0, 20 0">
+                    <TextBlock Text="Flu :" Foreground="White" Margin="0,0,10,0" FontSize="20"  HorizontalAlignment="Left"></TextBlock>
+                    <TextBlock Text="{Binding Suggestion.Flu.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1" Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20, 0, 20 0">
+                    <TextBlock Text="Sport :" Foreground="White" Margin="0,0,10,0" FontSize="20"  HorizontalAlignment="Left"></TextBlock>
+                    <TextBlock Text="{Binding Suggestion.Sport.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20, 0, 20 0">
+                    <TextBlock Text="Travel :" Foreground="White" Margin="0,0,10,0" FontSize="20"  HorizontalAlignment="Left"></TextBlock>
+                    <TextBlock Text="{Binding Suggestion.Travel.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20, 0, 20 0">
+                    <TextBlock Text="UV :" Foreground="White" Margin="0,0,10,0" FontSize="20"  HorizontalAlignment="Left"></TextBlock>
+                    <TextBlock Text="{Binding Suggestion.UV.Brief}" Foreground="White" FontWeight="Light" FontSize="20"  HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+            </Grid>
+           
         </Grid>
     </Grid>
 </Page>
