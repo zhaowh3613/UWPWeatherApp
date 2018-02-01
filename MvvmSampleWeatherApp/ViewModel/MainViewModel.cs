@@ -41,6 +41,20 @@ namespace MvvmSampleWeatherApp.ViewModel
             }
         }
 
+        private Uri mIcon;
+
+        public Uri Icon
+        {
+            get
+            {
+                return mIcon;
+            }
+            set
+            {
+                mIcon = value;
+                RaisePropertyChanged(() => Icon);
+            }
+        }
 
         private Now mNow;
 
@@ -91,7 +105,7 @@ namespace MvvmSampleWeatherApp.ViewModel
             }
         }
 
-        private String mSearchText = "shanghai";
+        private String mSearchText = "beijing";
 
         public String SearchText
         {
@@ -115,12 +129,11 @@ namespace MvvmSampleWeatherApp.ViewModel
             InitData();
         }
 
-        public async Task InitData()
+        public void InitData()
         {
             try
             {
-                UpdateWeatherNow();
-                UpdateWeatherSuggestion();
+                Search();
             }
             catch (Exception ex)
             {
@@ -128,21 +141,25 @@ namespace MvvmSampleWeatherApp.ViewModel
             }
          
         }
+        public void Search()
+        {
+            if (string.IsNullOrWhiteSpace(mSearchText))
+            {
+                return;
+            }
+            UpdateWeatherNow();
+            UpdateWeatherSuggestion();
+        }
 
         public async void UpdateWeatherNow()
         {
             try
             {
-                var collection = await WeatherApiBase.Instance.GetWeatherNow();
+                var collection = await WeatherApiBase.Instance.GetWeatherNow(mSearchText);
                 if (collection != null)
                 {
                     Now = collection.results?.FirstOrDefault().Now;
-                    Location = collection.results?.FirstOrDefault().Location;
-                    var lastUpdate = DateTime.Now;
-                    DateTime.TryParse(collection.results?.FirstOrDefault().LastUpdate, out lastUpdate);
-                    LastUpdateTime = lastUpdate.ToString("hh:mm");
-                    BGImage.ImageSource = GetBGImage(Now.Code);
-
+                    UpdateSharedInfo(collection);
                 }
             }
             catch (Exception ex)
@@ -155,7 +172,7 @@ namespace MvvmSampleWeatherApp.ViewModel
         {
             try
             {
-                var collection = await WeatherApiBase.Instance.GetWeatherSuggestion(SearchText);
+                var collection = await WeatherApiBase.Instance.GetWeatherSuggestion(mSearchText);
                 if (collection != null)
                 {
                     Suggestion = collection.results?.FirstOrDefault().Suggestion;
@@ -166,20 +183,28 @@ namespace MvvmSampleWeatherApp.ViewModel
                 Debug.WriteLine($"UpdateWeatherNow Error: {ex.Message}");
             }
         }
-
-        public async void Search()
+     
+        private void UpdateSharedInfo(WeatherCollection collection)
         {
-            var collection = await WeatherApiBase.Instance.GetWeatherNow(SearchText);
-            if (collection != null)
+            if (collection == null && collection.results == null)
             {
-                Now = collection.results?.FirstOrDefault().Now;
+                return;
+            }
+            try
+            {
+                string code = collection.results.FirstOrDefault().Now?.Code;
                 Location = collection.results?.FirstOrDefault().Location;
                 var lastUpdate = DateTime.Now;
                 DateTime.TryParse(collection.results?.FirstOrDefault().LastUpdate, out lastUpdate);
                 LastUpdateTime = lastUpdate.ToString("hh:mm");
-                BGImage.ImageSource = GetBGImage(Now.Code);
+                BGImage.ImageSource = GetBGImage(code);
+                Icon = GetIcon(code);
             }
-            UpdateWeatherSuggestion();
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"UpdateSharedInfo Error:{ex.Message}");
+            }
+            
         }
 
         private bool CanSearchExcute()
@@ -249,6 +274,11 @@ namespace MvvmSampleWeatherApp.ViewModel
                 default:
                     return new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
             }
+        }
+
+        private Uri GetIcon(string conditionCode= "0")
+        {
+            return new Uri($"ms-appx:///Assets/icon/{conditionCode}.png", UriKind.Absolute);
         }
     }
 }

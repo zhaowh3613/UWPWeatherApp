@@ -430,15 +430,132 @@
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\BG_windy.jpg">
       <PackagePath>Assets\BG_windy.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\0.png">
+      <PackagePath>Assets\icon\0.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\1.png">
+      <PackagePath>Assets\icon\1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\10.png">
+      <PackagePath>Assets\icon\10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\11.png">
+      <PackagePath>Assets\icon\11.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\12.png">
+      <PackagePath>Assets\icon\12.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\13.png">
+      <PackagePath>Assets\icon\13.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\14.png">
+      <PackagePath>Assets\icon\14.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\15.png">
+      <PackagePath>Assets\icon\15.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\16.png">
+      <PackagePath>Assets\icon\16.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\17.png">
+      <PackagePath>Assets\icon\17.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\18.png">
+      <PackagePath>Assets\icon\18.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\19.png">
+      <PackagePath>Assets\icon\19.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\2.png">
+      <PackagePath>Assets\icon\2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\20.png">
+      <PackagePath>Assets\icon\20.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\21.png">
+      <PackagePath>Assets\icon\21.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\22.png">
+      <PackagePath>Assets\icon\22.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\23.png">
+      <PackagePath>Assets\icon\23.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\24.png">
+      <PackagePath>Assets\icon\24.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\25.png">
+      <PackagePath>Assets\icon\25.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\26.png">
+      <PackagePath>Assets\icon\26.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\27.png">
+      <PackagePath>Assets\icon\27.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\28.png">
+      <PackagePath>Assets\icon\28.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\29.png">
+      <PackagePath>Assets\icon\29.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\3.png">
+      <PackagePath>Assets\icon\3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\30.png">
+      <PackagePath>Assets\icon\30.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\31.png">
+      <PackagePath>Assets\icon\31.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\32.png">
+      <PackagePath>Assets\icon\32.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\33.png">
+      <PackagePath>Assets\icon\33.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\34.png">
+      <PackagePath>Assets\icon\34.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\35.png">
+      <PackagePath>Assets\icon\35.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\36.png">
+      <PackagePath>Assets\icon\36.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\37.png">
+      <PackagePath>Assets\icon\37.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\38.png">
+      <PackagePath>Assets\icon\38.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\4.png">
+      <PackagePath>Assets\icon\4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\5.png">
+      <PackagePath>Assets\icon\5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\6.png">
+      <PackagePath>Assets\icon\6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\7.png">
+      <PackagePath>Assets\icon\7.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\8.png">
+      <PackagePath>Assets\icon\8.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\9.png">
+      <PackagePath>Assets\icon\9.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\icon\99.png">
+      <PackagePath>Assets\icon\99.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -459,6 +576,9 @@
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\bin\x86\Debug\MvvmSampleWeatherApp.xr.xml">
       <PackagePath>MvvmSampleWeatherApp.xr.xml</PackagePath>

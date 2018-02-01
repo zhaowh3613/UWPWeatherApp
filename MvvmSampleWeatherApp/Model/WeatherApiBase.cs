@@ -45,21 +45,21 @@ namespace MvvmSampleWeatherApp.Model
 
         public async Task<WeatherCollection> GetWeatherNow(string city = "beijing")
         {
-            var nowUrl = String.Format(Constants.NowUrl, city);
+            var nowUrl = String.Format(Constants.NowUrl, city.Trim());
             var collection = await GetWeatherCollection(nowUrl);
             return collection;
         }
 
         public async Task<WeatherCollection> GetWeatherDaily(string city = "beijing")
         {
-            var nowUrl = String.Format(Constants.DailyUrl, Constants.TOKENKEY, city);
+            var nowUrl = String.Format(Constants.DailyUrl, Constants.TOKENKEY, city.Trim());
             var collection = await GetWeatherCollection(nowUrl);
             return collection;
         }
 
         public async Task<WeatherCollection> GetWeatherSuggestion(string city = "beijing")
         {
-            var suggestionUrl = String.Format(Constants.SuggestionUrl, city);
+            var suggestionUrl = String.Format(Constants.SuggestionUrl, city.Trim());
             var collection = await GetWeatherCollection(suggestionUrl);
             return collection;
         }

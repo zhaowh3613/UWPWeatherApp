@@ -13,8 +13,9 @@
     <RootPropertyPathName Name="CarWashing" />
     <RootPropertyPathName Name="LastUpdateTime" />
     <RootPropertyPathName Name="Now" />
-    <RootPropertyPathName Name="Temperature" />
     <RootPropertyPathName Name="Text" />
+    <RootPropertyPathName Name="Temperature" />
+    <RootPropertyPathName Name="Icon" />
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="Country" />
     <RootPropertyPathName Name="Name" />
@@ -74,6 +75,11 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
       <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
