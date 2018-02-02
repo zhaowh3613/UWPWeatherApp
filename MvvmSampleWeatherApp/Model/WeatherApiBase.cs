@@ -32,8 +32,8 @@ namespace MvvmSampleWeatherApp.Model
                 {
                     return null;
                 }
-                var nowResp = await Util.SendHttpRequestWithAuth(url, Constants.UID, Constants.TOKENKEY);
-                var weatherCollection = Util.ParseJsonResult<WeatherCollection>(nowResp);
+                var resp = await Util.SendHttpRequestWithAuth(url, Constants.UID, Constants.TOKENKEY);
+                var weatherCollection = Util.ParseJsonResult<WeatherCollection>(resp);
                 return weatherCollection;
             }
             catch (Exception ex)
@@ -45,22 +45,22 @@ namespace MvvmSampleWeatherApp.Model
 
         public async Task<WeatherCollection> GetWeatherNow(string city = "beijing")
         {
-            var nowUrl = String.Format(Constants.NowUrl, city.Trim());
-            var collection = await GetWeatherCollection(nowUrl);
+            var url = String.Format(Constants.NowUrl, city.Trim());
+            var collection = await GetWeatherCollection(url);
             return collection;
         }
 
         public async Task<WeatherCollection> GetWeatherDaily(string city = "beijing")
         {
-            var nowUrl = String.Format(Constants.DailyUrl, Constants.TOKENKEY, city.Trim());
-            var collection = await GetWeatherCollection(nowUrl);
+            var url = String.Format(Constants.DailyUrl, Constants.TOKENKEY, city.Trim());
+            var collection = await GetWeatherCollection(url);
             return collection;
         }
 
         public async Task<WeatherCollection> GetWeatherSuggestion(string city = "beijing")
         {
-            var suggestionUrl = String.Format(Constants.SuggestionUrl, city.Trim());
-            var collection = await GetWeatherCollection(suggestionUrl);
+            var url = String.Format(Constants.SuggestionUrl, city.Trim());
+            var collection = await GetWeatherCollection(url);
             return collection;
         }
     }

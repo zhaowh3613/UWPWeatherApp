@@ -1,4 +1,5 @@
-﻿using MvvmSampleWeatherApp.Model;
+﻿using GalaSoft.MvvmLight.Messaging;
+using MvvmSampleWeatherApp.Model;
 using MvvmSampleWeatherApp.ViewModel;
 using Newtonsoft.Json;
 using System;
@@ -29,22 +30,27 @@ namespace MvvmSampleWeatherApp.View
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        MainViewModel vmLocator = ViewModelLocator.Instance.Main;
+        MainViewModel vm = ViewModelLocator.Instance.Main;
         public MainPage()
         {
             this.InitializeComponent();
             //var imageBrush = new ImageBrush();
             //imageBrush.ImageSource = new BitmapImage(new Uri("ms-appx:///Assets/BGa1920x1080.jpg", UriKind.Absolute));
             //MainGrid.Background = imageBrush;
-
+            Messenger.Default.Register<bool>(this, "ProgressState", UpdateProgressState);
         }
 
         private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                vmLocator.Search();
+                vm.Search();
             }
+        }
+
+        private void UpdateProgressState(bool state)
+        {
+            this.ProgressRing.IsActive = state;
         }
     }
 }

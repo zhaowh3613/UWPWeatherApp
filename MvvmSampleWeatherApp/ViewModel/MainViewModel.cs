@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using MvvmSampleWeatherApp.Model;
 using System;
 using System.Collections.Generic;
@@ -141,6 +142,7 @@ namespace MvvmSampleWeatherApp.ViewModel
             }
          
         }
+
         public void Search()
         {
             if (string.IsNullOrWhiteSpace(mSearchText))
@@ -155,9 +157,11 @@ namespace MvvmSampleWeatherApp.ViewModel
         {
             try
             {
+                Messenger.Default.Send<bool>(true, "ProgressState");
                 var collection = await WeatherApiBase.Instance.GetWeatherNow(mSearchText);
                 if (collection != null)
                 {
+                    await Task.Delay(1000);
                     Now = collection.results?.FirstOrDefault().Now;
                     UpdateSharedInfo(collection);
                 }
@@ -165,6 +169,10 @@ namespace MvvmSampleWeatherApp.ViewModel
             catch (Exception ex)
             {
                 Debug.WriteLine($"UpdateWeatherNow Error: {ex.Message}");
+            }
+            finally
+            {
+                Messenger.Default.Send<bool>(false, "ProgressState");
             }
         }
 

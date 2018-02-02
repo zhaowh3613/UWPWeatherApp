@@ -554,6 +554,27 @@
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\splash\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\SplashScreen.scale-200.png">
+      <PackagePath>Assets\splash\SplashScreen.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\splash\Square150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\splash\Square44x44Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\splash\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\StoreLogo.png">
+      <PackagePath>Assets\splash\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\splash\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\splash\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SkyDrive\WorkSpace\UWP\MvvmSampleWeatherApp\MvvmSampleWeatherApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
